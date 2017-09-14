@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+  windowscontainers:
+    image: windowscontainers
+    build:
+      context: ./WindowsContainers
+      dockerfile: Dockerfile
+  db:
+    build:
+      context: ./StockDatabase
+      args:
+        database_name: StockDatabase
+    environment:
+        ACCEPT_EULA: Y
+    volumes:
+      - type: bind
+        source: ./StockDatabase/Database/Database/Data
+        target: C:/database/Data
+  db2:
+    build:
+      context: ./PriceDatabase
+      args:
+        database_name: PriceDatabase
+    environment:
+        ACCEPT_EULA: Y
+    volumes:
+      - type: bind
+        source: ./PriceDatabase/Database/Database/Data
+        target: C:/database/Data
+  webapplication1:
+    image: webapplication1
+    build:
+      context: ./WebApplication1
+      dockerfile: Dockerfile
