@@ -27,7 +27,10 @@ namespace WindowsContainers.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return m_StockRepository.GetQuantity(id).ToString();
+            var isLowStock = m_StockRepository.LowStockWarning(id);
+            var message = m_StockRepository.GetQuantity(id).ToString();
+
+            return isLowStock ? message : message + " (This item is running low on stock)";
         }
 
         // POST api/stock

@@ -13,5 +13,13 @@ namespace WindowsContainers.Repositories
                 return db.Stock.FirstOrDefault(s => s.ProductId == productId).Quantity;
             }
         }
+
+        public bool LowStockWarning(int productId)
+        {
+            using (var db = new StockRepositoryContext())
+            {
+                return db.Stock.FirstOrDefault(s => s.ProductId == productId).LowStockWarning;
+            }
+        }
     }
 }

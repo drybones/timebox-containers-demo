@@ -23,5 +23,8 @@ namespace WindowsContainers
         public int ProductId { get; set; }
         [Required]
         public int Quantity { get; set; }
+
+        [Required]
+        public bool LowStockWarning { get; set; }
     }
 }
