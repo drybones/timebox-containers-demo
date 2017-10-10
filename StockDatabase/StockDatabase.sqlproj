@@ -223,10 +223,10 @@
   <ItemGroup>
     <None Include="Migrations\0001_20170830-1011_Chris.Auckland.sql" />
   </ItemGroup>
-  <Target Name="BeforeBuild">
-    <Exec Command="%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; {&amp; '$(SolutionDir)RemoveDiffVHD.ps1' '$(MSBuildProjectDirectory)'}&quot;; &quot;&amp; {&amp; '$(SolutionDir)CreateVHD.ps1' '\\tst-chrisa\public\containers-demo\StockDatabase\vhd.vhd' '$(MSBuildProjectDirectory)'}&quot;" />
-  </Target>
-  <Target Name="BeforeClean">
-    <Exec Command="%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; {&amp; '$(SolutionDir)RemoveDiffVHD.ps1' '$(MSBuildProjectDirectory)'}&quot;" />
-  </Target>
+  <ItemGroup>
+    <None Include="Migrations\0002_20170904-1157_Chris.Auckland.sql" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PreBuildEvent>%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe -NonInteractive -executionpolicy Unrestricted -command "&amp; {&amp; '$(SolutionDir)RemoveDiffVHD.ps1' '$(MSBuildProjectDirectory)'}"; "&amp; {&amp; '$(SolutionDir)CreateVHD.ps1' '\\lt-davidb\share\SQLClone\Stock\Image\vhd.vhd' '$(MSBuildProjectDirectory)'}"</PreBuildEvent>
+  </PropertyGroup>
 </Project>
