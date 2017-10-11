@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication1.Controllers
+namespace WebApplication.Controllers
 {
     public class HomeController : Controller
     {
@@ -14,7 +14,7 @@ namespace WebApplication1.Controllers
         {
             ViewData["Message"] = "Containerized SQL Server FTW!";
 
-            var client = new HttpClient {BaseAddress = new Uri("http://windowscontainers:80")};
+            var client = new HttpClient {BaseAddress = new Uri("http://webapi:80")};
 
             var result = client.GetStringAsync("api/stock/1");
             result.Wait();

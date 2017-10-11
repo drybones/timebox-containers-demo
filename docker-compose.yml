@@ -1,12 +1,12 @@
 version: '3.3'
 
 services:
-  windowscontainers:
-    image: windowscontainers
+  webapi:
+    image: webapi
     build:
-      context: ./WindowsContainers
+      context: ./WebApi
       dockerfile: Dockerfile
-  db:
+  stockinstance:
     build:
       context: ./StockDatabase
       args:
@@ -17,7 +17,7 @@ services:
       - type: bind
         source: ./StockDatabase/Database/Database/Data
         target: C:/database/Data
-  db2:
+  priceinstance:
     build:
       context: ./PriceDatabase
       args:
@@ -28,8 +28,8 @@ services:
       - type: bind
         source: ./PriceDatabase/Database/Database/Data
         target: C:/database/Data
-  webapplication1:
-    image: webapplication1
+  webapplication:
+    image: webapplication
     build:
-      context: ./WebApplication1
+      context: ./WebApplication
       dockerfile: Dockerfile

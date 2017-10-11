@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace WindowsContainers
+namespace WebApi
 {
     public class StockRepositoryContext : DbContext
     {
@@ -10,7 +10,7 @@ namespace WindowsContainers
 
               protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
                 {
-                    optionsBuilder.UseSqlServer(@"Server=db;Database=StockDatabase;User=sa;Password=D0cker!a8s;");
+                    optionsBuilder.UseSqlServer(@"Server=stockinstance;Database=StockDatabase;User=sa;Password=D0cker!a8s;");
                 }
     }
 

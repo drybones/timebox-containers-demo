@@ -1,4 +1,4 @@
-﻿namespace WindowsContainers.Repositories
+﻿namespace WebApi.Repositories
 {
     public interface IPriceRepository
     {

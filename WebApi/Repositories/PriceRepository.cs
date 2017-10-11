@@ -1,6 +1,6 @@
 using System.Linq;
 
-namespace WindowsContainers.Repositories
+namespace WebApi.Repositories
 {
     public class PriceRepository : IPriceRepository
     {

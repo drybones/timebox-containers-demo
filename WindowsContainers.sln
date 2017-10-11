@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsContainers", "WindowsContainers\WindowsContainers.csproj", "{38F44F1B-A6E1-4216-AE75-4CB44D36A589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{38F44F1B-A6E1-4216-AE75-4CB44D36A589}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E057170E-721D-4307-9F2F-1936EA6CFD5F}"
 EndProject
@@ -11,7 +11,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "StockDatabase", "StockDatab
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PriceDatabase", "PriceDatabase\PriceDatabase.sqlproj", "{754EEE51-430E-46C3-830A-CA2F1FAE44F8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{FBF7FC71-9E74-46A8-939D-A663FD7318B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplication\WebApplication.csproj", "{FBF7FC71-9E74-46A8-939D-A663FD7318B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

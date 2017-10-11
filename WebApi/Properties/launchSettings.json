@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "WindowsContainers": {
+    "WebApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values/1",

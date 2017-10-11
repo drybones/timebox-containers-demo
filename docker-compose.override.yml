@@ -1,12 +1,12 @@
 version: '3.3'
 
 services:
-  windowscontainers:
+  webapi:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
-  webapplication1:
+  webapplication:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:

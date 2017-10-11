@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace WindowsContainers.Repositories
+namespace WebApi.Repositories
 {
     public class PriceRepositoryContext : DbContext
     {
@@ -10,7 +10,7 @@ namespace WindowsContainers.Repositories
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=db2;Database=PriceDatabase;User=sa;Password=D0cker!a8s;");
+            optionsBuilder.UseSqlServer(@"Server=priceinstance;Database=PriceDatabase;User=sa;Password=D0cker!a8s;");
         }
     }
 
